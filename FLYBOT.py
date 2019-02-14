@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 client = discord.Client()
 
 
@@ -37,4 +38,6 @@ async def on_message(message):
         await client.send_message(message.channel, "**FLYBOT V0.1(Beta)**")
 
 
-client.run('NTQ1NTAwODM2MTgxMzExNDg4.D0aldw.mXz8yE5RRiMofMZD__Pc8ZRwbI8')
+access_token=os.environ["BOT_TOKEN"]        
+client.run(access_token)
+
